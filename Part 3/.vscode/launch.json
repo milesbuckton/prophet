@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run DeliveryReference",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/DeliveryReference/Win64/Debug/DeliveryReference.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/DeliveryReference",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run DeliveryReference Tests",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/DeliveryReference.Tests/Win64/Debug/DeliveryReferenceTests.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/DeliveryReference.Tests",
+            "console": "integratedTerminal"
+        }
+    ]
+}

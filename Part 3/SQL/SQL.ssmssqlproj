@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="SQL">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="LAPTOP-DELL\SQLEXPRESS:LAPTOP-DELL\User">
+          <Created>2026-05-15T13:43:22.9765942+02:00</Created>
+          <Type>SQL</Type>
+          <Server>LAPTOP-DELL\SQLEXPRESS</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>Prophet</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <TrustServerCertificate>True</TrustServerCertificate>
+          <EncryptionOption>False</EncryptionOption>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>SQL Server Management Studio</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="Create_Prophet_FruitShipments.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-DELL\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-DELL\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Create_Prophet_FruitShipments.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Create_Prophet_OrdersTable.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-DELL\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-DELL\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Create_Prophet_OrdersTable.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Query_SecondLargestShipment.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-DELL\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-DELL\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Query_SecondLargestShipment.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Query_LatestOrdersPerCustomer.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-DELL\SQLEXPRESS:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-DELL\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Query_LatestOrdersPerCustomer.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>

@@ -1,0 +1,72 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DeliveryDiscount\DeliveryDiscount.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PalletCalculator\PalletCalculator.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DeliveryDiscount.Tests\DeliveryDiscountTests.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PalletCalculator.Tests\PalletCalculatorTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DeliveryDiscount">
+        <MSBuild Projects="DeliveryDiscount\DeliveryDiscount.dproj"/>
+    </Target>
+    <Target Name="DeliveryDiscount:Clean">
+        <MSBuild Projects="DeliveryDiscount\DeliveryDiscount.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DeliveryDiscount:Make">
+        <MSBuild Projects="DeliveryDiscount\DeliveryDiscount.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PalletCalculator">
+        <MSBuild Projects="PalletCalculator\PalletCalculator.dproj"/>
+    </Target>
+    <Target Name="PalletCalculator:Clean">
+        <MSBuild Projects="PalletCalculator\PalletCalculator.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PalletCalculator:Make">
+        <MSBuild Projects="PalletCalculator\PalletCalculator.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DeliveryDiscountTests">
+        <MSBuild Projects="DeliveryDiscount.Tests\DeliveryDiscountTests.dproj"/>
+    </Target>
+    <Target Name="DeliveryDiscountTests:Clean">
+        <MSBuild Projects="DeliveryDiscount.Tests\DeliveryDiscountTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DeliveryDiscountTests:Make">
+        <MSBuild Projects="DeliveryDiscount.Tests\DeliveryDiscountTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PalletCalculatorTests">
+        <MSBuild Projects="PalletCalculator.Tests\PalletCalculatorTests.dproj"/>
+    </Target>
+    <Target Name="PalletCalculatorTests:Clean">
+        <MSBuild Projects="PalletCalculator.Tests\PalletCalculatorTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PalletCalculatorTests:Make">
+        <MSBuild Projects="PalletCalculator.Tests\PalletCalculatorTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DeliveryDiscount;PalletCalculator;DeliveryDiscountTests;PalletCalculatorTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DeliveryDiscount:Clean;PalletCalculator:Clean;DeliveryDiscountTests:Clean;PalletCalculatorTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DeliveryDiscount:Make;PalletCalculator:Make;DeliveryDiscountTests:Make;PalletCalculatorTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

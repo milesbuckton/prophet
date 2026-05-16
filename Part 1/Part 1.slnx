@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="Encryption.Tests/Encryption.Tests.csproj" />
+  <Project Path="Encryption/Encryption.csproj" />
+</Solution>

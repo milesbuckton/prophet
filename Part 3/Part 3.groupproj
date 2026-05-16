@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="DeliveryReference\DeliveryReference.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="DeliveryReference.Tests\DeliveryReferenceTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="DeliveryReference">
+        <MSBuild Projects="DeliveryReference\DeliveryReference.dproj"/>
+    </Target>
+    <Target Name="DeliveryReference:Clean">
+        <MSBuild Projects="DeliveryReference\DeliveryReference.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DeliveryReference:Make">
+        <MSBuild Projects="DeliveryReference\DeliveryReference.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DeliveryReferenceTests">
+        <MSBuild Projects="DeliveryReference.Tests\DeliveryReferenceTests.dproj"/>
+    </Target>
+    <Target Name="DeliveryReferenceTests:Clean">
+        <MSBuild Projects="DeliveryReference.Tests\DeliveryReferenceTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DeliveryReferenceTests:Make">
+        <MSBuild Projects="DeliveryReference.Tests\DeliveryReferenceTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="DeliveryReference;DeliveryReferenceTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="DeliveryReference:Clean;DeliveryReferenceTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="DeliveryReference:Make;DeliveryReferenceTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

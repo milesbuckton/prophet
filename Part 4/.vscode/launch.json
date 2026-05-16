@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run DeliveryDiscount",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/DeliveryDiscount/Win64/Debug/DeliveryDiscount.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/DeliveryDiscount",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run DeliveryDiscount Tests",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/DeliveryDiscount.Tests/Win64/Debug/DeliveryDiscountTests.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/DeliveryDiscount.Tests",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run PalletCalculator",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/PalletCalculator/Win64/Debug/PalletCalculator.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/PalletCalculator",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Run PalletCalculator Tests",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/PalletCalculator.Tests/Win64/Debug/PalletCalculatorTests.exe",
+            "args": [],
+            "cwd": "${workspaceFolder}/PalletCalculator.Tests",
+            "console": "integratedTerminal"
+        }
+    ]
+}
